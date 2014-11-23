@@ -125,12 +125,13 @@
   (dom/prepend!
    (dom/by-id "error")
    (hi/render-html
-    [:div {:class "alert alert-danger" :role "alert"}
+    [:div {:id "errorr":class "alert alert-danger" :role "alert"}
       [:button.close {:data-dismiss "alert", :type "button"} "×"]
       [:h4 "Error!"]
       [:p  (:response response)]])))
 
 (defn add-user[]
+  (destroy! (by-id "errorr"))
   (POST "/add-user" {:format
                      :raw
                      :params {:username (value (by-id-my "username"))

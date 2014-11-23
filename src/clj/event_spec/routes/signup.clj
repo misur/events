@@ -13,14 +13,14 @@
             [cemerick.friend :as friend]
             [compojure.route :as route]
             [cemerick.friend.credentials :as creds]
-            [event-spec.validation :as valid]
+            [event-spec.util.validation :as valid]
             [event-spec.models.datomic-db :as db]
             (cemerick.friend [workflows :as workflows]
                              [credentials :as creds])))
 
-(def users (atom (db/get-all-user)) )
+(def users (atom (db/get-all-username)) )
 
-
+@users
 
 (defn add-in-list[pom]
   (swap! users conj pom))
@@ -39,16 +39,18 @@
     (.lastModified (file (str (io/resource-path) "/signup.html")))))
 
 (defresource add-user
-  :allowed-methods [:post ]
+  :allowed-methods [:post]
   :available-media-types ["text/html"]
   :malformed? (fn [context]
                 (let [{:keys [username email password password-re]} (get-in context [:request :params])]
-                (valid/check-signup-form username 5 15 @users email password password-re)))
+                (valid/check-signup-form username 5 15 email password password-re)))
   :handle-malformed "Bad-form"
   :post! (fn [ctx]
-                 (let [params (get-in ctx [:request :form-params])]
-                 (add-in-list (get params "username"))))
-  :handle-created (fn [ctx] "ok" ))
+                 (let [{:keys [username email password  gender year zipcode]} (get-in ctx [:request :params])]
+                 (do(println "ok")
+                   (db/insert-user username email password gender year zipcode "user"))))
+  :handle-ok (fn [ctx] "ok" ))
+
 
 
 (defroutes signup-routes

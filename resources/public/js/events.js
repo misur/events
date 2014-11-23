@@ -55385,6 +55385,71 @@ domina.events.get_listeners = function get_listeners(content, type) {
     };
   }(type__$1), domina.nodes.call(null, content));
 };
+goog.provide("event_spec.signin");
+goog.require("cljs.core");
+goog.require("domina");
+goog.require("domina.events");
+goog.require("reagent.core");
+goog.require("ajax.core");
+goog.require("domina.events");
+goog.require("ajax.core");
+goog.require("domina");
+goog.require("domina");
+goog.require("hiccups.runtime");
+goog.require("hiccups.runtime");
+goog.require("reagent.core");
+goog.require("reagent.core");
+event_spec.signin.checkbox = reagent.core.atom.call(null, "password");
+event_spec.signin.change_value = function change_value() {
+  if (cljs.core._EQ_.call(null, cljs.core.deref.call(null, event_spec.signin.checkbox), "password")) {
+    return cljs.core.reset_BANG_.call(null, event_spec.signin.checkbox, "text");
+  } else {
+    return cljs.core.reset_BANG_.call(null, event_spec.signin.checkbox, "password");
+  }
+};
+event_spec.signin.forma = function forma() {
+  return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1014003715), new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "form", "form", 1017053238), new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, "class", "class", 1108647146), "form-horizontal form-signin-signup", new cljs.core.Keyword(null, "role", "role", 1017410536), "form", new cljs.core.Keyword(null, 
+  "method", "method", 4231316563), "post", new cljs.core.Keyword(null, "action", "action", 3885920680), "/login"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "input", "input", 1114262332), new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null, "type", "type", 1017479852), "text", new cljs.core.Keyword(null, "name", "name", 1017277949), "username", new cljs.core.Keyword(null, "placeholder", "placeholder", 1612151013), 
+  "Username", new cljs.core.Keyword(null, "id", "id", 1013907597), "username", new cljs.core.Keyword(null, "required", "required", 620764945), "required", new cljs.core.Keyword(null, "on-change", "on-change", 606853840), function() {
+    return cljs.core.List.EMPTY;
+  }], null)], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "input", "input", 1114262332), new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null, "type", "type", 1017479852), cljs.core.deref.call(null, event_spec.signin.checkbox), new cljs.core.Keyword(null, "name", "name", 1017277949), "password", new cljs.core.Keyword(null, "placeholder", "placeholder", 1612151013), "Password", new cljs.core.Keyword(null, "id", 
+  "id", 1013907597), "password", new cljs.core.Keyword(null, "required", "required", 620764945), "required", new cljs.core.Keyword(null, "on-change", "on-change", 606853840), function() {
+    return cljs.core.List.EMPTY;
+  }], null)], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1014003715), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", 1108647146), ""], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "label", "label", 1116631654), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, 
+  "input", "input", 1114262332), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "type", "type", 1017479852), "checkbox", new cljs.core.Keyword(null, "on-change", "on-change", 606853840), function() {
+    return event_spec.signin.change_value.call(null);
+  }], null), " Show password"], null)], null)], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1014003715), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", 1108647146), "control-group"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "button", "button", 3931183780), new cljs.core.PersistentArrayMap(null, 
+  4, [new cljs.core.Keyword(null, "id", "id", 1013907597), "signin", new cljs.core.Keyword(null, "type", "type", 1017479852), "submit", new cljs.core.Keyword(null, "value", "value", 1125876963), "Signup", new cljs.core.Keyword(null, "class", "class", 1108647146), "btn btn-primary btn-large"], null), "Signin"], null)], null)], null)], null);
+};
+event_spec.signin.run = function run() {
+  return reagent.core.render_component.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [event_spec.signin.forma], null), domina.by_id.call(null, "forma"));
+};
+goog.exportSymbol("event_spec.signin.run", event_spec.signin.run);
+goog.provide("event_spec.index");
+goog.require("cljs.core");
+goog.require("reagent.core");
+goog.require("ajax.core");
+goog.require("ajax.core");
+goog.require("hiccups.runtime");
+goog.require("hiccups.runtime");
+goog.require("reagent.core");
+goog.require("reagent.core");
+event_spec.index.click_count = reagent.core.atom.call(null, 0);
+event_spec.index.logged_u = reagent.core.atom.call(null, null);
+event_spec.index.by_id = function by_id(id) {
+  return document.getElementById(id);
+};
+event_spec.index.counting_component = function counting_component() {
+  return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1014003715), "Logged user: ", new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "code", "code", 1016963423), cljs.core.deref.call(null, event_spec.index.logged_u)], null)], null);
+};
+event_spec.index.currently_logged = function currently_logged(logged_user) {
+  return cljs.core.reset_BANG_.call(null, event_spec.index.logged_u, logged_user);
+};
+event_spec.index.run = function run() {
+  reagent.core.render_component.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [event_spec.index.counting_component], null), event_spec.index.by_id.call(null, "test"));
+  return ajax.core.GET.call(null, "/logged-user", new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "handler", "handler", 1706707644), event_spec.index.currently_logged], null));
+};
+goog.exportSymbol("event_spec.index.run", event_spec.index.run);
 goog.provide("event_spec.signup");
 goog.require("cljs.core");
 goog.require("domina");
@@ -55457,26 +55522,26 @@ event_spec.signup.check_email = function check_email(email) {
 };
 event_spec.signup.username_input = function username_input() {
   return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "input", "input", 1114262332), new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null, "type", "type", 1017479852), "text", new cljs.core.Keyword(null, "name", "name", 1017277949), "username", new cljs.core.Keyword(null, "placeholder", "placeholder", 1612151013), "Username", new cljs.core.Keyword(null, "id", "id", 1013907597), "username", new cljs.core.Keyword(null, 
-  "required", "required", 620764945), "required", new cljs.core.Keyword(null, "on-change", "on-change", 606853840), function(p1__5391_SHARP_) {
-    return event_spec.signup.check_username.call(null, p1__5391_SHARP_.target.value);
+  "required", "required", 620764945), "required", new cljs.core.Keyword(null, "on-change", "on-change", 606853840), function(p1__5378_SHARP_) {
+    return event_spec.signup.check_username.call(null, p1__5378_SHARP_.target.value);
   }], null)], null);
 };
 event_spec.signup.email_input = function email_input() {
   return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "input", "input", 1114262332), new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null, "type", "type", 1017479852), "text", new cljs.core.Keyword(null, "name", "name", 1017277949), "email", new cljs.core.Keyword(null, "placeholder", "placeholder", 1612151013), "Email", new cljs.core.Keyword(null, "id", "id", 1013907597), "email", new cljs.core.Keyword(null, "required", 
-  "required", 620764945), "required", new cljs.core.Keyword(null, "on-change", "on-change", 606853840), function(p1__5392_SHARP_) {
-    return event_spec.signup.check_email.call(null, p1__5392_SHARP_.target.value);
+  "required", 620764945), "required", new cljs.core.Keyword(null, "on-change", "on-change", 606853840), function(p1__5379_SHARP_) {
+    return event_spec.signup.check_email.call(null, p1__5379_SHARP_.target.value);
   }], null)], null);
 };
 event_spec.signup.password_input = function password_input() {
   return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "input", "input", 1114262332), new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null, "type", "type", 1017479852), "password", new cljs.core.Keyword(null, "name", "name", 1017277949), "password", new cljs.core.Keyword(null, "placeholder", "placeholder", 1612151013), "Password", new cljs.core.Keyword(null, "id", "id", 1013907597), "password", new cljs.core.Keyword(null, 
-  "required", "required", 620764945), "required", new cljs.core.Keyword(null, "on-change", "on-change", 606853840), function(p1__5393_SHARP_) {
-    return event_spec.signup.check_pass.call(null, p1__5393_SHARP_.target.value);
+  "required", "required", 620764945), "required", new cljs.core.Keyword(null, "on-change", "on-change", 606853840), function(p1__5380_SHARP_) {
+    return event_spec.signup.check_pass.call(null, p1__5380_SHARP_.target.value);
   }], null)], null);
 };
 event_spec.signup.re_password_input = function re_password_input() {
   return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "input", "input", 1114262332), new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null, "type", "type", 1017479852), "password", new cljs.core.Keyword(null, "name", "name", 1017277949), "re-password", new cljs.core.Keyword(null, "placeholder", "placeholder", 1612151013), "Password Confirmation", new cljs.core.Keyword(null, "id", "id", 1013907597), "re-password", new cljs.core.Keyword(null, 
-  "required", "required", 620764945), "required", new cljs.core.Keyword(null, "on-change", "on-change", 606853840), function(p1__5394_SHARP_) {
-    return event_spec.signup.check_pass_re.call(null, p1__5394_SHARP_.target.value);
+  "required", "required", 620764945), "required", new cljs.core.Keyword(null, "on-change", "on-change", 606853840), function(p1__5381_SHARP_) {
+    return event_spec.signup.check_pass_re.call(null, p1__5381_SHARP_.target.value);
   }], null)], null);
 };
 event_spec.signup.alert = function alert__$1() {
@@ -55491,25 +55556,25 @@ event_spec.signup.forma_foo = function forma_foo() {
   event_spec.signup.re_password_a)], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "p", "p", 1013904354), event_spec.signup.re_password_input.call(null)], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1014003715), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", 1108647146), "control-group"], null), new cljs.core.PersistentVector(null, 
   4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "select", "select", 4402849902), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "class", "class", 1108647146), "form-control", new cljs.core.Keyword(null, "id", "id", 1013907597), "year", new cljs.core.Keyword(null, "name", "name", 1017277949), "year"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "option", "option", 4298734567), 
   "-- Choose year --"], null), function() {
-    var iter__4266__auto__ = function iter__5399(s__5400) {
+    var iter__4266__auto__ = function iter__5386(s__5387) {
       return new cljs.core.LazySeq(null, function() {
-        var s__5400__$1 = s__5400;
+        var s__5387__$1 = s__5387;
         while (true) {
-          var temp__4126__auto__ = cljs.core.seq.call(null, s__5400__$1);
+          var temp__4126__auto__ = cljs.core.seq.call(null, s__5387__$1);
           if (temp__4126__auto__) {
-            var s__5400__$2 = temp__4126__auto__;
-            if (cljs.core.chunked_seq_QMARK_.call(null, s__5400__$2)) {
-              var c__4264__auto__ = cljs.core.chunk_first.call(null, s__5400__$2);
+            var s__5387__$2 = temp__4126__auto__;
+            if (cljs.core.chunked_seq_QMARK_.call(null, s__5387__$2)) {
+              var c__4264__auto__ = cljs.core.chunk_first.call(null, s__5387__$2);
               var size__4265__auto__ = cljs.core.count.call(null, c__4264__auto__);
-              var b__5402 = cljs.core.chunk_buffer.call(null, size__4265__auto__);
+              var b__5389 = cljs.core.chunk_buffer.call(null, size__4265__auto__);
               if (function() {
-                var i__5401 = 0;
+                var i__5388 = 0;
                 while (true) {
-                  if (i__5401 < size__4265__auto__) {
-                    var x = cljs.core._nth.call(null, c__4264__auto__, i__5401);
-                    cljs.core.chunk_append.call(null, b__5402, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "option", "option", 4298734567), "" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(x)], null));
-                    var G__5403 = i__5401 + 1;
-                    i__5401 = G__5403;
+                  if (i__5388 < size__4265__auto__) {
+                    var x = cljs.core._nth.call(null, c__4264__auto__, i__5388);
+                    cljs.core.chunk_append.call(null, b__5389, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "option", "option", 4298734567), "" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(x)], null));
+                    var G__5390 = i__5388 + 1;
+                    i__5388 = G__5390;
                     continue;
                   } else {
                     return true;
@@ -55517,13 +55582,13 @@ event_spec.signup.forma_foo = function forma_foo() {
                   break;
                 }
               }()) {
-                return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__5402), iter__5399.call(null, cljs.core.chunk_rest.call(null, s__5400__$2)));
+                return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__5389), iter__5386.call(null, cljs.core.chunk_rest.call(null, s__5387__$2)));
               } else {
-                return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__5402), null);
+                return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__5389), null);
               }
             } else {
-              var x = cljs.core.first.call(null, s__5400__$2);
-              return cljs.core.cons.call(null, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "option", "option", 4298734567), "" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(x)], null), iter__5399.call(null, cljs.core.rest.call(null, s__5400__$2)));
+              var x = cljs.core.first.call(null, s__5387__$2);
+              return cljs.core.cons.call(null, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "option", "option", 4298734567), "" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(x)], null), iter__5386.call(null, cljs.core.rest.call(null, s__5387__$2)));
             }
           } else {
             return null;
@@ -55545,11 +55610,12 @@ event_spec.signup.handler = function handler(response) {
   2, [new cljs.core.Keyword(null, "data-dismiss", "data-dismiss", 770256601), "alert", new cljs.core.Keyword(null, "type", "type", 1017479852), "button"], null), "\u00d7"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "h4", "h4", 1013907518), "Success!"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "p", "p", 1013904354), response], null)], null)));
 };
 event_spec.signup.err_handler = function err_handler(response) {
-  return domina.prepend_BANG_.call(null, domina.by_id.call(null, "error"), hiccups.runtime.render_html.call(null, new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1014003715), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "class", "class", 1108647146), "alert alert-danger", new cljs.core.Keyword(null, "role", "role", 1017410536), "alert"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, 
-  [new cljs.core.Keyword(null, "button.close", "button.close", 888420270), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "data-dismiss", "data-dismiss", 770256601), "alert", new cljs.core.Keyword(null, "type", "type", 1017479852), "button"], null), "\u00d7"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "h4", "h4", 1013907518), "Error!"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, 
-  [new cljs.core.Keyword(null, "p", "p", 1013904354), (new cljs.core.Keyword(null, "response", "response", 673580979)).cljs$core$IFn$_invoke$arity$1(response)], null)], null)));
+  return domina.prepend_BANG_.call(null, domina.by_id.call(null, "error"), hiccups.runtime.render_html.call(null, new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1014003715), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "id", "id", 1013907597), "errorr", new cljs.core.Keyword(null, "class", "class", 1108647146), "alert alert-danger", new cljs.core.Keyword(null, "role", "role", 1017410536), "alert"], 
+  null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "button.close", "button.close", 888420270), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "data-dismiss", "data-dismiss", 770256601), "alert", new cljs.core.Keyword(null, "type", "type", 1017479852), "button"], null), "\u00d7"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "h4", "h4", 
+  1013907518), "Error!"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "p", "p", 1013904354), (new cljs.core.Keyword(null, "response", "response", 673580979)).cljs$core$IFn$_invoke$arity$1(response)], null)], null)));
 };
 event_spec.signup.add_user = function add_user() {
+  domina.destroy_BANG_.call(null, domina.by_id.call(null, "errorr"));
   return ajax.core.POST.call(null, "/add-user", new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, "format", "format", 4040092521), new cljs.core.Keyword(null, "raw", "raw", 1014016922), new cljs.core.Keyword(null, "params", "params", 4313443576), new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null, "username", "username", 748190792), domina.value.call(null, event_spec.signup.by_id_my.call(null, "username")), new cljs.core.Keyword(null, "email", "email", 1110523662), 
   domina.value.call(null, event_spec.signup.by_id_my.call(null, "email")), new cljs.core.Keyword(null, "password", "password", 2230889997), domina.value.call(null, event_spec.signup.by_id_my.call(null, "password")), new cljs.core.Keyword(null, "password-re", "password-re", 2417632791), domina.value.call(null, event_spec.signup.by_id_my.call(null, "re-password")), new cljs.core.Keyword(null, "year", "year", 1017609135), domina.value.call(null, event_spec.signup.by_id_my.call(null, "year")), new cljs.core.Keyword(null, 
   "gender", "gender", 4059358771), domina.value.call(null, event_spec.signup.by_id_my.call(null, "gender")), new cljs.core.Keyword(null, "zipcode", "zipcode", 732758016), domina.value.call(null, event_spec.signup.by_id_my.call(null, "zipcode"))], null), new cljs.core.Keyword(null, "handler", "handler", 1706707644), event_spec.signup.handler, new cljs.core.Keyword(null, "error-handler", "error-handler", 1866823671), event_spec.signup.err_handler], null));
@@ -55559,24 +55625,3 @@ event_spec.signup.run = function run() {
   return domina.events.listen_BANG_.call(null, event_spec.signup.by_id_my.call(null, "add"), new cljs.core.Keyword(null, "click", "click", 1108654330), event_spec.signup.add_user);
 };
 goog.exportSymbol("event_spec.signup.run", event_spec.signup.run);
-goog.provide("event_spec.index");
-goog.require("cljs.core");
-goog.require("reagent.core");
-goog.require("hiccups.runtime");
-goog.require("hiccups.runtime");
-goog.require("reagent.core");
-goog.require("reagent.core");
-event_spec.index.click_count = reagent.core.atom.call(null, 0);
-event_spec.index.by_id = function by_id(id) {
-  return document.getElementById(id);
-};
-event_spec.index.counting_component = function counting_component() {
-  return new cljs.core.PersistentVector(null, 7, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1014003715), "The atom ", new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "code", "code", 1016963423), "click-count"], null), " has value: ", cljs.core.deref.call(null, event_spec.index.click_count), ". ", new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, 
-  "input", "input", 1114262332), new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, "type", "type", 1017479852), "button", new cljs.core.Keyword(null, "value", "value", 1125876963), "Click me!", new cljs.core.Keyword(null, "class", "class", 1108647146), "btn", new cljs.core.Keyword(null, "on-click", "on-click", 1416542092), function() {
-    return cljs.core.swap_BANG_.call(null, event_spec.index.click_count, cljs.core.inc);
-  }], null)], null)], null);
-};
-event_spec.index.run = function run() {
-  return reagent.core.render_component.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [event_spec.index.counting_component], null), event_spec.index.by_id.call(null, "test"));
-};
-goog.exportSymbol("event_spec.index.run", event_spec.index.run);

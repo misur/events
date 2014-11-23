@@ -1,4 +1,4 @@
-(ns event-spec.routes.home
+(ns event-spec.routes.signin
   (:require [compojure.core :refer :all]
             [event-spec.views.layout :as layout]
             [liberator.core
@@ -13,36 +13,27 @@
             [cemerick.friend :as friend]
             [compojure.route :as route]
             [cemerick.friend.credentials :as creds]
-            [event-spec.util.resources :as r]
-            (cemerick.friend [workflows :as workflows][credentials :as creds])))
+            [event-spec.validation :as valid]
+            [event-spec.models.datomic-db :as db]
+            (cemerick.friend [workflows :as workflows]
+                             [credentials :as creds])))
 
-(defn home []
-  (layout/common [:h1 "Hello World!"]))
-
-
-
-(defresource index
+(defresource signin
   :available-media-types ["text/html"]
   :exists?
   (fn [context]
-    [(io/get-resource "/index.html")
-     {::file (file (str (io/resource-path) "/index.html"))}])
+    [(io/get-resource "/signin.html")
+     {::file (file (str (io/resource-path) "/signin.html"))}])
   :handle-ok
   (fn [{{{resource :resource} :route-params} :request}]
-    (clojure.java.io/input-stream (io/get-resource "/index.html")))
+    (clojure.java.io/input-stream (io/get-resource "/signin.html")))
   :last-modified
   (fn [{{{resource :resource} :route-params} :request}]
-    (.lastModified (file (str (io/resource-path) "/index.html")))))
+    (.lastModified (file (str (io/resource-path) "/signin.html")))))
 
 
-
-
-
-(defroutes home-routes
-  (GET "/" request index)
-  (GET "/admin" request
-       (friend/authorize #{:admin}(home)))
-  (GET "/role-admin" req
-       (friend/authorize #{:admin} "You're an admin!"))
-  (GET "/role-user" request
-       (friend/authorize #{:user} "You are a user!")))
+(defroutes signin-routes
+  (GET "/signin" request signin)
+  (GET "/login" request (ring.util.response/redirect "/"))
+  (friend/logout (ANY "/logout" request (ring.util.response/redirect "/")))
+  (GET "/logged-user" [] (response/edn (:username(cemerick.friend/current-authentication)))))

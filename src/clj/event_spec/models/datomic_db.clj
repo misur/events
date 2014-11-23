@@ -17,6 +17,7 @@
 
 (def schema (load-file "resources/public/datomic/schema.dtm"))
 
+
 (d/transact conn schema)
 
 ;;kreiranje seme
@@ -26,9 +27,9 @@
   ;                          (FileReader."schema.dtm"))))))
 
 
-(defn insert-user [username email password gender year-of-birth zip-cod user-type] (.get (.transact conn
-                                [{
-                               :db/id #db/id[:db.part/user -1000001]
+(defn insert-user [username email password gender year-of-birth zip-cod user-type]
+  (.get (.transact conn[{
+                               :db/id #db/id [:db.part/user -1000001]
                                :user/username username
                                :user/email email
                                :user/password (creds/hash-bcrypt password)
@@ -38,14 +39,32 @@
                                :user/type user-type}])))
 
 
+(defn username-exists? [username]
+  (if
+    (empty? (d/q '[:find ?u
+                   :in $ ?u
+                   :where [?e :user/username ?u]] (d/db conn) username ))
+    false
+    true))
+
 
 (defn user-query []
-  (let[temp (d/q '[:find ?u ?p
+  (let[temp (d/q '[:find ?u ?p ?t
              :where [?user :user/username ?u]
                     [?user :user/password ?p]
+                   [?user :user/type ?t]
              ]
             (d/db conn))]
-  (def users (into {} (map (fn [[k v]] [k {:username k :password v}]) temp)))) users)
+   (def users (into {} (map (fn [[k v t]] [k {:username k :password v :roles #{(read-string (str ":"t))}}])temp )))users))
+
+
+(defn  get-all-username[]
+  (d/q '[:find ?u ?p ?t
+         :where [?user :user/username ?u]
+         [?user :user/password ?p]
+         [?user :user/type ?t]]
+       (d/db conn)))
+
 
 
 
@@ -79,7 +98,7 @@
 
 (defn insert-event [event-name event-type  address price capacity event-time date]
   (.get (.transact conn
-                   [{:db/id #db/id[:db.part/user -1000001]
+                   [{:db/id #db/id[:db.part/user -1000002]
                      :event/eventname event-name
                      :event/type event-type
                      :event/address address
