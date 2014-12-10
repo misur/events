@@ -55385,6 +55385,54 @@ domina.events.get_listeners = function get_listeners(content, type) {
     };
   }(type__$1), domina.nodes.call(null, content));
 };
+goog.provide("event_spec.profile");
+goog.require("cljs.core");
+goog.require("domina");
+goog.require("domina.events");
+goog.require("reagent.core");
+goog.require("ajax.core");
+goog.require("domina.events");
+goog.require("ajax.core");
+goog.require("domina");
+goog.require("domina");
+goog.require("hiccups.runtime");
+goog.require("hiccups.runtime");
+goog.require("reagent.core");
+goog.require("reagent.core");
+event_spec.profile.profile = function profile(p__5528) {
+  var map__5530 = p__5528;
+  var map__5530__$1 = cljs.core.seq_QMARK_.call(null, map__5530) ? cljs.core.apply.call(null, cljs.core.hash_map, map__5530) : map__5530;
+  var type = cljs.core.get.call(null, map__5530__$1, new cljs.core.Keyword(null, "type", "type", 1017479852));
+  var zipCode = cljs.core.get.call(null, map__5530__$1, new cljs.core.Keyword(null, "zipCode", "zipCode", 731804704));
+  var yearOfBirth = cljs.core.get.call(null, map__5530__$1, new cljs.core.Keyword(null, "yearOfBirth", "yearOfBirth", 1923299741));
+  var gender = cljs.core.get.call(null, map__5530__$1, new cljs.core.Keyword(null, "gender", "gender", 4059358771));
+  var email = cljs.core.get.call(null, map__5530__$1, new cljs.core.Keyword(null, "email", "email", 1110523662));
+  var username = cljs.core.get.call(null, map__5530__$1, new cljs.core.Keyword(null, "username", "username", 748190792));
+  return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1014003715), new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1014003715), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", 1108647146), "span6 offset3"], null), new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, 
+  "h4", "h4", 1013907518), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", 1108647146), "widget-header"], null), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "i.icon-user", "i.icon-user", 3721284812)], null), "User details ", username], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1014003715), new cljs.core.PersistentArrayMap(null, 
+  1, [new cljs.core.Keyword(null, "class", "class", 1108647146), "widget-body"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1014003715), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", 1108647146), "center-align"], null), new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.col-md-3.col-lg-3", "div.col-md-3.col-lg-3", 
+  3321642919), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "align", "align", 1106807415), "center"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "img.img-circle", "img.img-circle", 1644359831), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "src", "src", 1014018390), "https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz\x3d100", new cljs.core.Keyword(null, 
+  "alt", "alt", 1014000923), "User Pic"], null)], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.col-md-9.col-lg-9", "div.col-md-9.col-lg-9", 2142561895), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "table.table.table-user-information", "table.table.table-user-information", 3518226939), new cljs.core.PersistentVector(null, 8, 5, cljs.core.PersistentVector.EMPTY_NODE, 
+  [new cljs.core.Keyword(null, "tbody", "tbody", 1124062088), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tr", "tr", 1013907952), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), "Username"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), username], 
+  null)], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tr", "tr", 1013907952), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), "Email"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, 
+  [new cljs.core.Keyword(null, "a", "a", 1013904339), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "href", "href", 1017115293), "mailto:" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(email)], null), email], null)], null)], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tr", "tr", 1013907952), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, 
+  "td", "td", 1013907938), "Date of Birth"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), yearOfBirth], null)], null), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tr", "tr", 1013907952)], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tr", "tr", 1013907952), new cljs.core.PersistentVector(null, 
+  2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), "Zip code"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), zipCode], null)], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tr", "tr", 1013907952), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, 
+  "td", "td", 1013907938), "Gender"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), gender], null)], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tr", "tr", 1013907952), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), "User type"], null), new cljs.core.PersistentVector(null, 
+  2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), type], null)], null)], null)], null)], null)], null)], null)], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.panel-footer", "div.panel-footer", 1056102195), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "span.pull-right", "span.pull-right", 4108617002), new cljs.core.PersistentVector(null, 
+  3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "a.btn.btn-sm.btn-warning", "a.btn.btn-sm.btn-warning", 2513775513), new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, "type", "type", 1017479852), "button", new cljs.core.Keyword(null, "data-toggle", "data-toggle", 2577667657), "tooltip", new cljs.core.Keyword(null, "data-original-title", "data-original-title", 4241459025), "Edit this user", new cljs.core.Keyword(null, "href", "href", 1017115293), "edit.html"], 
+  null), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "i.icon-edit", "i.icon-edit", 3720793867)], null)], null)], null)], null)], null)], null);
+};
+event_spec.profile.handler = function handler(response) {
+  return domina.append_BANG_.call(null, domina.by_id.call(null, "profile"), hiccups.runtime.render_html.call(null, event_spec.profile.profile.call(null, cljs.core.first.call(null, response))));
+};
+event_spec.profile.error_handler = function error_handler() {
+  return ajax.core.GET.call(null, "/");
+};
+event_spec.profile.run = function run() {
+  return ajax.core.GET.call(null, "/user", new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "handler", "handler", 1706707644), event_spec.profile.handler, new cljs.core.Keyword(null, "error-handler", "error-handler", 1866823671), event_spec.profile.error_handler], null));
+};
+goog.exportSymbol("event_spec.profile.run", event_spec.profile.run);
 goog.provide("event_spec.signin");
 goog.require("cljs.core");
 goog.require("domina");
@@ -55625,3 +55673,127 @@ event_spec.signup.run = function run() {
   return domina.events.listen_BANG_.call(null, event_spec.signup.by_id_my.call(null, "add"), new cljs.core.Keyword(null, "click", "click", 1108654330), event_spec.signup.add_user);
 };
 goog.exportSymbol("event_spec.signup.run", event_spec.signup.run);
+goog.provide("event_spec.edit");
+goog.require("cljs.core");
+goog.require("domina");
+goog.require("domina.events");
+goog.require("reagent.core");
+goog.require("ajax.core");
+goog.require("domina.events");
+goog.require("ajax.core");
+goog.require("domina");
+goog.require("domina");
+goog.require("hiccups.runtime");
+goog.require("hiccups.runtime");
+goog.require("reagent.core");
+goog.require("reagent.core");
+event_spec.edit.edit = function edit(p__5428) {
+  var map__5434 = p__5428;
+  var map__5434__$1 = cljs.core.seq_QMARK_.call(null, map__5434) ? cljs.core.apply.call(null, cljs.core.hash_map, map__5434) : map__5434;
+  var type = cljs.core.get.call(null, map__5434__$1, new cljs.core.Keyword(null, "type", "type", 1017479852));
+  var zipCode = cljs.core.get.call(null, map__5434__$1, new cljs.core.Keyword(null, "zipCode", "zipCode", 731804704));
+  var yearOfBirth = cljs.core.get.call(null, map__5434__$1, new cljs.core.Keyword(null, "yearOfBirth", "yearOfBirth", 1923299741));
+  var gender = cljs.core.get.call(null, map__5434__$1, new cljs.core.Keyword(null, "gender", "gender", 4059358771));
+  var email = cljs.core.get.call(null, map__5434__$1, new cljs.core.Keyword(null, "email", "email", 1110523662));
+  var username = cljs.core.get.call(null, map__5434__$1, new cljs.core.Keyword(null, "username", "username", 748190792));
+  return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1014003715), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1014003715), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", 1108647146), "span6 offset3"], null), new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, 
+  "form", "form", 1017053238), new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "h4", "h4", 1013907518), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", 1108647146), "widget-header"], null), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "i.icon-cog", "i.icon-cog", 3872168318)], null), "  Edit user ", username], null), new cljs.core.PersistentVector(null, 
+  5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1014003715), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", 1108647146), "widget-body"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1014003715), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "id", "id", 1013907597), "success"], null)], null), new cljs.core.PersistentVector(null, 
+  2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1014003715), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "id", "id", 1013907597), "error"], null)], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1014003715), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", 1108647146), "center-align"], null), new cljs.core.PersistentVector(null, 
+  6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.col-md-3.col-lg-3", "div.col-md-3.col-lg-3", 3321642919), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "align", "align", 1106807415), "center"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "img.img-circle", "img.img-circle", 1644359831), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "src", "src", 
+  1014018390), "https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz\x3d100", new cljs.core.Keyword(null, "alt", "alt", 1014000923), "User Pic"], null)], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.form-group", "div.form-group", 1370565925), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "label", "label", 1116631654), 
+  new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "for", "for", 1014005819), "exampleInputFile"], null), "File input"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "input#exampleInputFile", "input#exampleInputFile", 4002616615), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "type", "type", 1017479852), "file"], null)], null)], null), new cljs.core.PersistentVector(null, 1, 5, 
+  cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "br", "br", 1013907394)], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.col-md-9.col-lg-9", "div.col-md-9.col-lg-9", 2142561895), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "table.table.table-user-information", "table.table.table-user-information", 3518226939), new cljs.core.PersistentVector(null, 
+  11, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tbody", "tbody", 1124062088), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tr", "tr", 1013907952), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), "Username"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, 
+  "td", "td", 1013907938), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "input", "input", 1114262332), new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null, "type", "type", 1017479852), "text", new cljs.core.Keyword(null, "value", "value", 1125876963), username, new cljs.core.Keyword(null, "id", "id", 1013907597), "username", new cljs.core.Keyword(null, "name", "name", 1017277949), "username", new cljs.core.Keyword(null, 
+  "readonly", "readonly", 4442141108), "readonly"], null)], null)], null)], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tr", "tr", 1013907952), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), "Email"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), 
+  new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "input", "input", 1114262332), new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, "type", "type", 1017479852), "text", new cljs.core.Keyword(null, "value", "value", 1125876963), email, new cljs.core.Keyword(null, "id", "id", 1013907597), "email", new cljs.core.Keyword(null, "name", "name", 1017277949), "email"], null)], null)], null)], null), new cljs.core.PersistentVector(null, 
+  3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tr", "tr", 1013907952), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), "Old password"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, 
+  "input", "input", 1114262332), new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, "type", "type", 1017479852), "text", new cljs.core.Keyword(null, "value", "value", 1125876963), "", new cljs.core.Keyword(null, "id", "id", 1013907597), "old-password", new cljs.core.Keyword(null, "name", "name", 1017277949), "old-password"], null)], null)], null)], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tr", "tr", 
+  1013907952), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), "New password"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "input", "input", 1114262332), new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, 
+  "type", "type", 1017479852), "text", new cljs.core.Keyword(null, "value", "value", 1125876963), "", new cljs.core.Keyword(null, "id", "id", 1013907597), "new-password", new cljs.core.Keyword(null, "name", "name", 1017277949), "new-password"], null)], null)], null)], null), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tr", "tr", 1013907952)], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, 
+  [new cljs.core.Keyword(null, "tr", "tr", 1013907952), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), "Date of Birth"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "select", "select", 4402849902), new cljs.core.PersistentArrayMap(null, 
+  3, [new cljs.core.Keyword(null, "class", "class", 1108647146), "form-control", new cljs.core.Keyword(null, "id", "id", 1013907597), "year", new cljs.core.Keyword(null, "name", "name", 1017277949), "year"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "option", "option", 4298734567), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "seleted", "seleted", 2992020570), "selected"], null), yearOfBirth], null), 
+  function() {
+    var iter__4266__auto__ = function(map__5434, map__5434__$1, type, zipCode, yearOfBirth, gender, email, username) {
+      return function iter__5435(s__5436) {
+        return new cljs.core.LazySeq(null, function(map__5434, map__5434__$1, type, zipCode, yearOfBirth, gender, email, username) {
+          return function() {
+            var s__5436__$1 = s__5436;
+            while (true) {
+              var temp__4126__auto__ = cljs.core.seq.call(null, s__5436__$1);
+              if (temp__4126__auto__) {
+                var s__5436__$2 = temp__4126__auto__;
+                if (cljs.core.chunked_seq_QMARK_.call(null, s__5436__$2)) {
+                  var c__4264__auto__ = cljs.core.chunk_first.call(null, s__5436__$2);
+                  var size__4265__auto__ = cljs.core.count.call(null, c__4264__auto__);
+                  var b__5438 = cljs.core.chunk_buffer.call(null, size__4265__auto__);
+                  if (function() {
+                    var i__5437 = 0;
+                    while (true) {
+                      if (i__5437 < size__4265__auto__) {
+                        var x = cljs.core._nth.call(null, c__4264__auto__, i__5437);
+                        cljs.core.chunk_append.call(null, b__5438, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "option", "option", 4298734567), "" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(x)], null));
+                        var G__5439 = i__5437 + 1;
+                        i__5437 = G__5439;
+                        continue;
+                      } else {
+                        return true;
+                      }
+                      break;
+                    }
+                  }()) {
+                    return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__5438), iter__5435.call(null, cljs.core.chunk_rest.call(null, s__5436__$2)));
+                  } else {
+                    return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__5438), null);
+                  }
+                } else {
+                  var x = cljs.core.first.call(null, s__5436__$2);
+                  return cljs.core.cons.call(null, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "option", "option", 4298734567), "" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(x)], null), iter__5435.call(null, cljs.core.rest.call(null, s__5436__$2)));
+                }
+              } else {
+                return null;
+              }
+              break;
+            }
+          };
+        }(map__5434, map__5434__$1, type, zipCode, yearOfBirth, gender, email, username), null, null);
+      };
+    }(map__5434, map__5434__$1, type, zipCode, yearOfBirth, gender, email, username);
+    return iter__4266__auto__.call(null, cljs.core.range.call(null, 1990, 2050));
+  }()], null)], null)], null), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tr", "tr", 1013907952)], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tr", "tr", 1013907952), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), "Zip code"], null), new cljs.core.PersistentVector(null, 
+  2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "input", "input", 1114262332), new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, "type", "type", 1017479852), "text", new cljs.core.Keyword(null, "value", "value", 1125876963), zipCode, new cljs.core.Keyword(null, "id", "id", 1013907597), "zipcode", new cljs.core.Keyword(null, 
+  "name", "name", 1017277949), "zidcode"], null)], null)], null)], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tr", "tr", 1013907952), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), "Gender"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), new cljs.core.PersistentVector(null, 
+  5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "select", "select", 4402849902), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "class", "class", 1108647146), "form-control", new cljs.core.Keyword(null, "id", "id", 1013907597), "gender", new cljs.core.Keyword(null, "name", "name", 1017277949), "gender"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "option", "option", 4298734567), 
+  new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "seleted", "seleted", 2992020570), "selected"], null), gender], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "option", "option", 4298734567), "Male"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "option", "option", 4298734567), "Female"], null)], null)], null)], null), new cljs.core.PersistentVector(null, 
+  3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tr", "tr", 1013907952), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), "User type"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "td", "td", 1013907938), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, 
+  "input", "input", 1114262332), new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null, "type", "type", 1017479852), "text", new cljs.core.Keyword(null, "value", "value", 1125876963), type, new cljs.core.Keyword(null, "id", "id", 1013907597), "type", new cljs.core.Keyword(null, "name", "name", 1017277949), "type", new cljs.core.Keyword(null, "disabled", "disabled", 1284845038), "disabled"], null)], null)], null)], null)], null)], null)], null)], null)], null)], null), new cljs.core.PersistentVector(null, 
+  2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.panel-footer", "div.panel-footer", 1056102195), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "span.pull-right", "span.pull-right", 4108617002), new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "button", "button", 3931183780), new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, 
+  "type", "type", 1017479852), "submit", new cljs.core.Keyword(null, "id", "id", 1013907597), "edit-user", new cljs.core.Keyword(null, "value", "value", 1125876963), "save", new cljs.core.Keyword(null, "class", "class", 1108647146), "btn btn-primary btn-large"], null), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "i.icon-edit", "i.icon-edit", 3720793867)], null), " Save changes"], null)], null)], null)], null)], null)], null);
+};
+event_spec.edit.handler = function handler(response) {
+  return domina.append_BANG_.call(null, domina.by_id.call(null, "edit"), hiccups.runtime.render_html.call(null, event_spec.edit.edit.call(null, cljs.core.first.call(null, response))));
+};
+event_spec.edit.handler_success = function handler_success(response) {
+  return domina.prepend_BANG_.call(null, domina.by_id.call(null, "success"), hiccups.runtime.render_html.call(null, new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div#success.alert.alert-success", "div#success.alert.alert-success", 1647857557), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "button.close", "button.close", 888420270), new cljs.core.PersistentArrayMap(null, 
+  2, [new cljs.core.Keyword(null, "data-dismiss", "data-dismiss", 770256601), "alert", new cljs.core.Keyword(null, "type", "type", 1017479852), "button"], null), "\u00d7"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "h4", "h4", 1013907518), "Success!"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "p", "p", 1013904354), response], null)], null)));
+};
+event_spec.edit.err_handler = function err_handler(response) {
+  return domina.prepend_BANG_.call(null, domina.by_id.call(null, "error"), hiccups.runtime.render_html.call(null, new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1014003715), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "id", "id", 1013907597), "errorr", new cljs.core.Keyword(null, "class", "class", 1108647146), "alert alert-danger", new cljs.core.Keyword(null, "role", "role", 1017410536), "alert"], 
+  null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "button.close", "button.close", 888420270), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "data-dismiss", "data-dismiss", 770256601), "alert", new cljs.core.Keyword(null, "type", "type", 1017479852), "button"], null), "\u00d7"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "h4", "h4", 
+  1013907518), "Error!"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "p", "p", 1013904354), (new cljs.core.Keyword(null, "response", "response", 673580979)).cljs$core$IFn$_invoke$arity$1(response)], null)], null)));
+};
+event_spec.edit.edit_user = function edit_user() {
+  domina.destroy_BANG_.call(null, domina.by_id.call(null, "errorr"));
+  return ajax.core.POST.call(null, "/edit-user", new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, "format", "format", 4040092521), new cljs.core.Keyword(null, "raw", "raw", 1014016922), new cljs.core.Keyword(null, "params", "params", 4313443576), new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null, "username", "username", 748190792), domina.value.call(null, domina.by_id.call(null, "username")), new cljs.core.Keyword(null, "email", "email", 1110523662), domina.value.call(null, 
+  domina.by_id.call(null, "email")), new cljs.core.Keyword(null, "old-password", "old-password", 674397939), domina.value.call(null, domina.by_id.call(null, "old-password")), new cljs.core.Keyword(null, "new-password", "new-password", 800283546), domina.value.call(null, domina.by_id.call(null, "new-password")), new cljs.core.Keyword(null, "year", "year", 1017609135), domina.value.call(null, domina.by_id.call(null, "year")), new cljs.core.Keyword(null, "gender", "gender", 4059358771), domina.value.call(null, 
+  domina.by_id.call(null, "gender")), new cljs.core.Keyword(null, "zipcode", "zipcode", 732758016), domina.value.call(null, domina.by_id.call(null, "zipcode"))], null), new cljs.core.Keyword(null, "handler", "handler", 1706707644), event_spec.edit.handler_success, new cljs.core.Keyword(null, "error-handler", "error-handler", 1866823671), event_spec.edit.err_handler], null));
+};
+event_spec.edit.edit_user2 = function edit_user2() {
+  return alert("aaa");
+};
+event_spec.edit.run = function run() {
+  ajax.core.GET.call(null, "/user", new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "handler", "handler", 1706707644), event_spec.edit.handler], null));
+  return domina.events.listen_BANG_.call(null, domina.by_id.call(null, "edit-user"), new cljs.core.Keyword(null, "click", "click", 1108654330), event_spec.edit.edit_user);
+};
+goog.exportSymbol("event_spec.edit.run", event_spec.edit.run);

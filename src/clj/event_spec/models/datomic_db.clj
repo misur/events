@@ -15,7 +15,7 @@
 
 (def conn (d/connect conn-uri))
 
-(def schema (load-file "resources/public/datomic/schema.dtm"))
+(def schema (load-file "resources/public/datomic/schema.edn"))
 
 
 (d/transact conn schema)
@@ -37,6 +37,24 @@
                                :user/yearOfBirth year-of-birth
                                :user/zipCode zip-cod
                                :user/type user-type}])))
+
+
+(defn find-id-for-update[username]
+  "return id for update user "
+  (ffirst(d/q '[:find ?id
+              :in $ ?usename
+              :where [?id :user/username ?usename]] (d/db conn) username)))
+
+(defn update [username email gender year zipcode]
+  "update user "
+  (d/transact conn [{:db/id (find-id-for-update username)
+                   :user/email email
+                   :user/gender gender
+                   :user/yearOfBirth year
+                   :user/zipCode zipcode}]))
+
+
+
 
 
 (defn username-exists? [username]
@@ -95,6 +113,18 @@
             (d/db conn)username)]
         (def  users (into [] (map (fn [[u  e g y z t]]
                                    :key-word u {:username u :email e :gender g  :yearOfBirth y  :zipCode z :type t }) temp-user)))) users)
+
+(defn get-user-username [username]
+        (d/q '[:find ?username  ?email ?gender ?year ?zipCode ?type
+             :in $ ?username
+             :where [?user :user/username ?username]
+                    [?user :user/email ?email]
+                    [?user :user/gender ?gender]
+                    [?user :user/yearOfBirth ?year]
+                    [?user :user/zipCode ?zipCode]
+                    [?user :user/type ?type]]
+            (d/db conn)username))
+
 
 (defn insert-event [event-name event-type  address price capacity event-time date]
   (.get (.transact conn

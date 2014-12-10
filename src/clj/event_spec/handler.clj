@@ -16,7 +16,9 @@
             [cemerick.friend.credentials :as creds]
             [cemerick.friend.workflows :as workflows]
             [hiccup.page :as h]
-            [event-spec.routes.signin :refer [signin-routes]]))
+            [event-spec.routes.signin :refer [signin-routes]]
+            [event-spec.routes.profile :refer [profile-routes]]
+            [event-spec.routes.edit :refer [edit-routes]]))
 
 (defn init []
   (println "event-spec is starting"))
@@ -24,20 +26,12 @@
 (defn destroy []
   (println "event-spec is shutting down"))
 
-(def users
-  "dummy in-memory user database."
-  {"root" {:username "root"
-           :password (creds/hash-bcrypt "admin_password")
-           :roles #{:admin}}
-   "jane" {:username "jane"
-           :password (creds/hash-bcrypt "user_password")
-           :roles #{:user}}})
 
 (defroutes app-routes
   (route/resources "/")
-  (route/not-found "not found"))
+  (route/not-found "not found1"))
 
-(def my-routes (-> (routes home-routes signup-routes signin-routes app-routes)))
+(def my-routes (-> (routes home-routes signup-routes signin-routes profile-routes edit-routes app-routes)))
 
 (def app
       (handler/site
